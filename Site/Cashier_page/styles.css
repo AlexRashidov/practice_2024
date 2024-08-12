@@ -24,13 +24,14 @@ body {
     background-size: cover;
 }
 .navigation {
-    position: absolute;
-    width: 571px;
-    height: 78px;
-    left: 392px;
-    top: 117px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: #6D37DE;
+    padding: 10px 50px;
+    border-radius: 50px;
+    margin: 20px auto;
+    width: 45%;
 }
 .nav-button {
     background: #6D37DE;
