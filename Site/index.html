@@ -27,9 +27,9 @@
         		<header>
         		<nav>
 		            <ul>
-		                <li><a href="#">Вход</a></li>
-		                <li><a href="#">Расписание</a></li>
-		                <li><a href="#">Отзывы</a></li>
+		                <li><a href="Login\index.html">Вход</a></li>
+		                <li><a href="Schedule\Schedule.html">Расписание</a></li>
+						<li><a href="Revie\Reviews.html">Отзывы</a></li>
 		            </ul>
         		</nav>
         		<div name="texts">
@@ -44,8 +44,8 @@
 		        
 		        <p>Перелеты на самолетах и вертолетах. Бронирование по телефону</p>
 		        <div name="button_div">
-		        	<button>Забронировать билет</button>
-		        </div>
+					<button><a href="#contact-us">Забронировать билет</a></button>
+				</div>
     		</main>
         </section>
         
@@ -60,7 +60,7 @@
 			    <img src="img/raspisanie_v1.jpg" alt="Самолет на взлетной полосе">
 			    <img src="img/raspisanie_v3.jpg" alt="Терминал аэропорта">
 	  		</div>
-	  		<button><a href="#" class="btn">Расписание рейсов</a></button>
+	  		<button><a href="Schedule\Schedule.html" class="btn">Расписание рейсов</a></button>
         </section>
         <!-- Секция экрана отзывов-->
         <section class="reviews">
@@ -86,10 +86,10 @@
 				    <p name="name_3">Екатерина</p>
 			    </div>
 		  	</div>
-		    <button><a href="#" class="btn">Оставить отзыв</a></button>
+		    <button><a href="Revie\Reviews.html" class="btn">Оставить отзыв</a></button>
         </section>
 		<!-- Секция экрана с контактной информацией-->
-        <section class="contact-us">
+        <section class="contact-us" id="contact-us">
         	<h2>Свяжитесь с нами</h2>
 			<p>Региональный аэропорт Самолет к вашим услугам</p>
 			<form>
@@ -107,6 +107,7 @@
 
     </footer>
 
-    
+<script src="index.js"></script>
+
 </body>
 </html>
