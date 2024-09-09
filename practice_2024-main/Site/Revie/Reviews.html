@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="img/Logo.png" alt="Логотип">
+        </div>
+
+        <h1 class="title">Отзывы</h1>
+
+        <button class="button-text">Написать отзыв</button>
+
+        <div class="reviews-container">
+            <div class="review-group">
+                <div class="review-rectangle"></div>
+                <div class="review-image" style="background-image: url('img/photo1.jpg');"></div>
+                <p class="review-name">Алексей</p>
+                <p class="review-text">Быстрое и удобное бронирование билетов. Отличная поддержка клиентов!</p>
+            </div>
+
+            <div class="review-group">
+                <div class="review-rectangle"></div>
+                <div class="review-image" style="background-image: url('img/photo3.jpg');"></div>
+                <p class="review-name">Ольга</p>
+                <p class="review-text">Прекрасное обслуживание и доступные цены.</p>
+            </div>
+
+            <div class="review-group">
+                <div class="review-rectangle"></div>
+                <div class="review-image" style="background-image: url('img/photo2.jpg');"></div>
+                <p class="review-name">Екатерина</p>
+                <p class="review-text">Большой выбор рейсов и внимательное обслуживание. Рекомендую всем!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="review-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Добавить отзыв</h2>
+            <div class="input-group">
+                <label for="photo">Фото</label>
+                <input type="file" id="photo" accept="image/*">
+            </div>
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Имя">
+            </div>
+            <div class="input-group">
+                <textarea id="review-text" placeholder="Опишите плюсы и минусы"></textarea>
+            </div>
+            <button id="submit-review">Отправить</button>
+        </div>
+    </div>
+
+    <script src="Reviews.js"></script>
+</body>
+</html>
