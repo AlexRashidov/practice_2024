@@ -30,11 +30,15 @@ input{
 div{
   display: flex;
   flex-direction: column;
-  border: 1px solid;
+  border: 0px solid;
+}
+
+.name_div input{
+  border: 0px solid;
 }
 
 section{
-  margin-top: 400px;
+  margin-top: 300px;
 }
 
 span{
@@ -69,5 +73,33 @@ p{
   font-size: 32px; 
   padding: 0px;
   width: 450px;
-  border: 1px solid;
+  margin-left: 1300px;
+
+}
+
+button{
+  /* Button */
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-left: 20px;
+  border-radius: 30px;
+  color: #7448D1;
+  width: 120px;
+  height: 50px;
+  position: absolute;
+  top: 200px;
+  left: 1400px;
+  background-color: #7448D1 ;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
