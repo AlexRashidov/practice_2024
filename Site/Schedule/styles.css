@@ -1,8 +1,7 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #FFFFFF;
+margin: 0;
+padding: 0;
+font-family: 'Roboto',Arial,sans-serif;
 }
 
 .container {
@@ -28,17 +27,344 @@ body {
 }
 
 .title {
-    position: absolute;
-    width: 164px;
-    height: 48px;
-    left: 638px;
-    top: 38px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    display: flex;
-    align-items: center;
-    color: #000000;
+position: absolute;
+width: 164px;
+height: 48px;
+left: 638px;
+top: 38px;
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 48px;
+display: flex;
+align-items: center;
+color: #000000;
 }
 
+.schedule-wrapper {
+position: relative;
+top: 150px;
+}
+
+.schedule-filters {
+padding: 0 24px;
+}
+
+@media (min-width: 1280px) {
+.schedule-filters {
+display: flex;
+flex-flow: row nowrap;
+align-items: center;
+justify-content: space-between;
+padding: 0 0 24px 0;
+}
+}
+
+.schedule-filters__item {
+display: flex;
+flex-flow: column wrap;
+align-content: space-between;
+position: relative;
+height: 37px;
+margin: 0 0 9px 0;
+font-size: 11px;
+line-height: 13px;
+padding: 3px 11px;
+background: #F4F4F4;
+border: .5px solid #676767;
+box-sizing: border-box;
+border-radius: 6px;
+cursor: pointer;
+}
+
+@media (min-width: 1024px) and (max-width:1280px) {
+.schedule-filters__item {
+width: 195px;
+min-width: 195px;
+margin: 0 9px 9px 0;
+}
+}
+
+@media (min-width: 1280px) {
+.schedule-filters__item {
+width: 195px;
+min-width: 195px;
+height: 54px;
+margin: 0 9px 0 0;
+padding: 11px;
+}
+}
+
+.schedule-filters__item-header {
+margin: 0;
+padding: 0;
+font-size: 12px;
+line-height: 14px;
+}
+
+.schedule-filters__item-selected-text {
+padding: 2px 0 0 0;
+opacity: .5;
+text-overflow: ellipsis;
+}
+
+@media (min-width: 1280px) {
+.schedule-filters__item-selected-text {
+padding-top: 3px;
+}
+}
+
+.schedule-filters__item-option {
+border-radius: 3px;
+padding: 5px 2px 4px 2px;
+cursor: pointer;
+}
+
+.schedule-filters__item-option:hover {
+background: #9c47ec;
+}
+
+.schedule-filters__item-option--selected {
+background: #9c47ec;
+}
+
+.schedule-filters__item-option-list {
+display: none;
+position: absolute;
+top: 100%;
+left: 5px;
+width: 185px;
+max-height: 300px;
+overflow-y: auto;
+margin: 4px 0 0 0;
+padding: 6px 4px;
+background-color: #F4F4F4;
+border: .5px solid #676767;
+box-sizing: border-box;
+border-radius: 6px;
+list-style: none;
+z-index: 1;
+transition: max-height .1s ease;
+}
+
+.schedule-filters__item-option-list::-webkit-scrollbar {
+width: 6px;
+background-color: transparent;
+}
+
+.schedule-filters__item-option-list::-webkit-scrollbar-thumb {
+border-radius: 3px;
+background-color: #692699;
+}
+
+@media (min-width: 1024px) {
+.schedule-filters__item-option-list {
+width: calc(100% - 10px);
+}
+}
+
+.schedule-filters__item-option-list--hidden {
+max-height: 0;
+z-index: -1;
+}
+
+.schedule-filters__item-option-input {
+display: none;
+}
+
+.schedule-filters__item-option-label {
+cursor: pointer;
+}
+
+.schedule-filters__btns-wrapper {
+padding: 0;
+display: flex;
+flex: 1 0 100%;
+flex-flow: row nowrap;
+justify-content: center;
+}
+
+.schedule-filters__button {
+flex: 1 0 100%;
+justify-self: flex-end;
+margin: 0;
+padding: 0;
+background-color: transparent;
+border: none;
+cursor: pointer;
+}
+
+.schedule-filters__button:focus {
+outline: none;
+box-shadow: 0 0 5px rgba(88,88,245,0.719);
+}
+
+.schedule-filters__button-reset {
+display: none;
+margin-right: 10px;
+}
+
+.schedule-filters__button-reset--visible {
+display: inline-block;
+}
+
+.schedule-table_wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 24px; 
+  }
+  
+  .schedule-table {
+    width: 100%;
+    max-width: 1280px; 
+  }
+
+  .schedule-table_header {
+    background-color: #590bbf;
+  }
+
+  .text-bold {
+    color: #FFFFFF;
+  }
+
+.schedule-table__row {
+display: flex;
+flex-flow: column wrap;
+margin: 0 24px 10px 24px;
+padding: 12px 19px;
+box-sizing: border-box;
+background-color: #FFFFFF;
+border-radius: 12px;
+box-shadow: 0 13px 20px rgba(190,190,190,0.4);
+transition: background-color .1s ease;
+cursor: pointer;
+}
+
+.schedule-table__row:first-child {
+margin-top: 15px;
+}
+
+.schedule-table__row:last-child {
+margin-bottom: 32px;
+}
+
+.schedule-table__row:hover {
+background-color: #9c47ec;
+}
+
+@media (min-width: 1280px) {
+.schedule-table__row {
+display: table-row;
+height: auto;
+margin: 0;
+padding: 0;
+border-radius: 0;
+box-shadow: none;
+}
+
+.schedule-table__row:first-child,
+.schedule-table__row:last-child {
+    margin: 0;
+}
+
+.schedule-table__row .schedule-table__cell:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.schedule-table__row .schedule-table__cell:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+
+}
+
+.schedule-table__row--active {
+background-color: #ffd500;
+}
+
+.schedule-table__row--active:hover {
+background-color: #ffd500;
+}
+
+.schedule-table__cell {
+display: block;
+width: 38%;
+margin: 0;
+padding: 0 5px 0 0;
+box-sizing: border-box;
+overflow: hidden;
+flex: 1 0 25%;
+}
+
+@media (min-width: 1024px) {
+.schedule-table__cell {
+white-space: pre-wrap;
+vertical-align: top;
+}
+}
+
+@media (min-width: 1280px) {
+.schedule-table__cell {
+display: table-cell;
+width: auto !important;
+padding: 15px 5px;
+}
+
+.schedule-table__cell:first-child {
+    padding-left: 25px;
+}
+
+.schedule-table__cell:last-child {
+    padding-right: 25px;
+}
+
+
+}
+
+.schedule-table__cell-header {
+margin: 0;
+padding: 0;
+font-weight: bold;
+font-size: 12px;
+line-height: 14px;
+}
+
+@media (min-width: 1280px) {
+.schedule-table__cell-header {
+display: none;
+}
+}
+
+.datepicker-input {
+display: block;
+max-width: 115px;
+margin: 0;
+padding: 2px 0 0 0;
+opacity: 1;
+color: rgba(0,0,0,0.5);
+font-family: inherit;
+font-size: 11px;
+line-height: 13px;
+height: 13px;
+border: none;
+background-color: transparent;
+cursor: pointer;
+}
+
+.datepicker-input::placeholder {
+font-family: 'Roboto',Arial,sans-serif;
+font-size: 11px;
+line-height: 13px;
+color: rgba(0,0,0,0.5);
+}
+
+.datepicker-input:focus,
+.datepicker-input:active {
+outline: none;
+}
+
+@media (min-width: 1280px) {
+.datepicker-input {
+padding-top: 3px;
+}
+}
